@@ -3,7 +3,7 @@
 filetype off
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/dotfiles/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
@@ -22,9 +22,6 @@ Plugin 'VundleVim/Vundle.vim'
 " Interface
 Plugin 'vim-airline/vim-airline'
 " Plugin 'scrooloose/nerdcommenter'
-
-" Color Schemes
-Plugin 'sjl/badwolf' 
 
 call vundle#end()
 
@@ -47,10 +44,6 @@ set number
 
 " Make tabbing nicer
 set wildmenu
-
-" Set colorscheme
-set background=dark
-colorscheme badwolf
 
 " --- Hotkeys ---
 
