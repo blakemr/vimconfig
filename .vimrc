@@ -30,6 +30,8 @@ filetype plugin indent on
 syntax on
 set number relativenumber
 colorscheme dracula
+set splitright
+set t_Co=256
 
 " Wildmenu - Complete to longest, tab through the rest
 set wildmenu
