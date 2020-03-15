@@ -9,44 +9,33 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" Language support
-" Plugin 'scrooloose/syntastic'
-" Plugin 'ctrlpvim/ctrlp.vim'
+" --- Language support ---
 
-" Code completion
-" Plugin 'valloric/youcompleteme'
+" --- Code completion ---
 
-" Integrations
-" Plugin 'scrooloose/nerdtree'
+" --- Integrations ---
 
-" Interface
+" --- Interface ---
 Plugin 'vim-airline/vim-airline'
-" Plugin 'scrooloose/nerdcommenter'
+
+" --- Themes ---
+Plugin 'dracula/vim', { 'name': 'dracula' }
 
 call vundle#end()
 
 " Re-enable filetypes
 filetype plugin indent on
 
-" " Systastic - config
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-" 
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
-
 " --- Config Vim Settings ---
-" Set numbered lines
-set number
+syntax on
+set number relativenumber
+colorscheme dracula
 
-" Make tabbing nicer
+" Wildmenu - Complete to longest, tab through the rest
 set wildmenu
+set wildmode=longest:full,full
 
 " --- Hotkeys ---
-
 nnoremap <C-H> <C-W><C-H> 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
