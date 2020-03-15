@@ -3,7 +3,7 @@
 filetype off
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/dotfiles/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
@@ -29,9 +29,13 @@ filetype plugin indent on
 " --- Config Vim Settings ---
 syntax on
 set number relativenumber
-colorscheme dracula
 set splitright
-set t_Co=256
+
+" Colorsceme config
+colorscheme dracula
+
+" This is done because the terminal isn't playing nice with the colorscheme
+highlight Normal ctermfg=NONE ctermbg=NONE
 
 " Wildmenu - Complete to longest, tab through the rest
 set wildmenu
