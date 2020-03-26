@@ -10,8 +10,11 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " --- Language support ---
+Plugin 'rust-lang/rust.vim'
+Plugin 'scrooloose/syntastic'
 
 " --- Code completion ---
+Plugin 'valloric/youcompleteme'
 
 " --- Integrations ---
 
@@ -25,6 +28,17 @@ call vundle#end()
 
 " Re-enable filetypes
 filetype plugin indent on
+
+" --- Plugin Config ---
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " --- Config Vim Settings ---
 syntax on
